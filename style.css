@@ -13,6 +13,9 @@ body {
   font-size: 24px;
   display: inline-flex;
   flex-direction: column;
+  margin: 0;
+  cursor: pointer;
+
 }
 fieldset {
   border-left: none;
@@ -21,12 +24,154 @@ fieldset {
   border-top: 2px solid black;
 }
 .asset-preview {
-  background-color: lightgrey;
+  border-top: 2px solid black;
+  background-color: #ffffff;
+  background-image:  linear-gradient(rgb(0,0,0,.1) 1px, transparent 1px), linear-gradient(to right, rgb(0,0,0,.1) 1px, #ffffff 1px);
+  background-size: 20px 20px;
   width: 100%;
-  height: 200px;
+  height: 75%;
+  border-radius: 0 0 13px 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .assetid {
   font-size: 12px;
   margin: 0;
   text-align: right;
+}
+.assetcard-top {
+  height: 25%;
+}
+.imageasset-preview {
+  max-width: 95%;
+}
+.asset-preview-color {
+  border-top: 2px solid black;
+  background-color: #04A5A6;
+  width: 100%;
+  height: 75%;
+  border-radius: 0 0 13px 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.colorasset-hex {
+  height: max-content;
+  margin: 0;
+  align-items: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 30px;
+}
+#asset-detailed-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0,.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+#asset-detailed {
+  background-color: white;
+  width: 80vw;
+  min-width: 850px;
+  min-height: 550px;
+  height: 50vw;
+  border-radius: 15px;
+  border: 3px solid black;
+  display: flex;
+}
+#assetview-left {
+  width: 40%;
+  height: 100%;
+  border-right: 3px solid black;
+  display: inline-flex;
+  background-color: #ffffff;
+  background-image:  linear-gradient(rgb(0,0,0,.1) 1px, transparent 1px), linear-gradient(to right, rgb(0,0,0,.1) 1px, #ffffff 1px);
+  background-size: 20px 20px;
+  border-radius: 12px 0 0 12px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+#assetview-right {
+  width: 60%;
+  height: 100%;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.assetpreview-spinner {
+  overflow-x: scroll;
+  display: flex;
+  gap: 5px;
+}
+.assetcard-type {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#assetview-download {
+  background-color: #04A5A6;
+  width: 60%;
+  height: 40px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#assetview-left-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.assetview-img {
+  width: 90%;
+}
+#assetview-save {
+  background-color: #04A5A6;
+  width: 60%;
+  height: 40px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 10px;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.noMargin {
+  margin: 0;
+}
+
+#assetview-publicDesc {
+  width: 90%;
+  border: 2px solid black;
+  border-radius: 15px;
+  height: 30px;
+}
+#downloadbutton-icon {
+  height: 40px;
+}
+.close-icon {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  right: 10px;
 }

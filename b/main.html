@@ -4,52 +4,91 @@
   <meta charset='UTF-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <title>Your Brand || getbrandkit.com</title>
+  <title>Your BrandKit || getbrandkit.com</title>
+  <link rel='icon' href='../brandkit-favi.svg'>
   <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Josefin+Sans'/>
   <link href='../style.css' rel='stylesheet' type='text/css' />
 </head>
 <body>
-  <h1>Your Brand</h1>
+  <div id='asset-detailed-wrapper'>
+    <img src='../x-solid.svg' class='close-icon' id='close-detailed'>
+    <div id='asset-detailed'>
+      <div id='assetview-left'>
+        <div id='assetview-left-wrap'>
+          <img src='../brandkit-main.svg' class='assetview-img'>
+        </div>
+        <div id='assetview-download'>
+          <img src='../download-white.png' id='downloadbutton-icon'>
+        </div>
+      </div>
+      <div id='assetview-right'>
+        <p>Asset Details</p>
+        <div id='assetview-details'>
+          <textarea id='assetview-publicDesc'></textarea>
+        </div>
+        <div id='assetview-save'>
+          <p class='noMargin' id='savetext'>Save Changes</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h1>Your BrandKit</h1>
+  <p>Click to view asset details.</p>
+  <p>These are the assets that will appear when someone links to your brand.</p>
   <div id='logos'>
     <fieldset>
       <legend>Logos</legend>
-      <div class='asset-sample'>
-        <p>Main Logo</p>
-        <div class='asset-preview'></div>
-        <p class='assetid'></p>
+      <div id='brand-logos' class='assetpreview-spinner'>
+        <div class='asset-sample'>
+          <div class='assetcard-top'>
+            <p class='assetcard-type'>Primary Logo</p>
+          </div>
+          <div class='asset-preview'>
+            <img src='../brandkit-main.svg' class='imageasset-preview'>
+          </div>
+        </div>
+        <div class='asset-sample'>
+          <div class='assetcard-top'>
+            <p class='assetcard-type'>Favicon</p>
+          </div>
+          <div class='asset-preview'>
+            <img src='../brandkit-favi.svg' class='imageasset-preview'>
+          </div>
+        </div>
       </div>
-      <div class='asset-sample'>
-        <p>Secondary Logo</p>
-        <div class='asset-preview'></div>
-        <p class='assetid'></p>
-      </div>
-      <div class='asset-sample'>
-        <p>Favicon</p>
-        <div class='asset-preview'></div>
-        <p class='assetid'>ad3c2</p>
-      </div>
+      
     </fieldset>
-    
   </div>
   <div id='colors'>
     <fieldset>
       <legend>Colors</legend>
-      <div class='asset-sample'>
-        <p>Main Color</p>
-        <div class='asset-preview'></div>
-      </div>
-      <div class='asset-sample'>
-        <p>Secondary Color</p>
-        <div class='asset-preview'></div>
-      </div>
-      
+      <div id='brand-colors' class='assetpreview-spinner'>
+        <div class='asset-sample'>
+          <div class='assetcard-top'>
+            <p class='assetcard-type'>Primary Color</p>
+          </div>
+          <div class='asset-preview-color'>
+            <p class='colorasset-hex'>#04A5A6</p>
+          </div>
+        </div>
+        <div class='asset-sample'>
+          <div class='assetcard-top'>
+            <p class='assetcard-type'>Secondary Color</p>
+          </div>
+          <div class='asset-preview-color'>
+            <p class='colorasset-hex'>#F49F0A</p>
+          </div>
+        </div>
     </fieldset>
     
   </div>
   
   <script src='https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js'></script>
-  <script src='script.js'></script>
+  <script src='https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js'></script>
+  <script src='https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js'></script>
+  <script src='brandedit.js' type='module'></script>
 </head>
 </body>
 </html>
+

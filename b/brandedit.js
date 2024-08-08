@@ -33,6 +33,7 @@ database.ref(`brands/${brand}/logos/primary`).once('value').then(snapshot => {
     element.addEventListener('click', () => {
       console.log(element.id)
       document.querySelector('#asset-detailed-wrapper').style.display = 'flex'
+      document.querySelector('#assetview-img').src = `https://getbrandkit.s3.us-east-2.amazonaws.com/${element.id}.png`
       document.querySelector('#close-detailed').addEventListener('click', () => {
         document.querySelector('#asset-detailed-wrapper').style.display = 'none'
       })
@@ -48,6 +49,7 @@ database.ref(`brands/${brand}/logos/favicon`).once('value').then(snapshot => {
     element.addEventListener('click', () => {
       console.log(element.id)
       document.querySelector('#asset-detailed-wrapper').style.display = 'flex'
+      document.querySelector('#assetview-img').src = `https://getbrandkit.s3.us-east-2.amazonaws.com/${element.id}.png`
       document.querySelector('#close-detailed').addEventListener('click', () => {
         document.querySelector('#asset-detailed-wrapper').style.display = 'none'
       })

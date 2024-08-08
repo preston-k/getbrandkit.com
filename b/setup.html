@@ -6,12 +6,41 @@
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <title>Set Up Your Brand || getbrandkit.com</title>
   <link rel='icon' href='../brandkit-favi.svg'>
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Josefin+Sans'/>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Inter'/>
+  <!-- <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Inter'/> -->
   <link href='../style.css' rel='stylesheet' type='text/css' />
 </head>
 <body>
   <h1>Add <u>your</u> brand to BrandKit.</h1>
   <p>BrandKit is the easiest way to maintain brand consistency.</p>
+  <div id='interactivesetup-wrap'>
+    <div id='interactivesetup'>
+      <div id='interactive-1' class='interactive-steps'>
+        <div class='interactivesetup-text'>
+          <h1>What is your work email?</h1>
+          <p>We will send you a verification code.</p>
+        </div>
+        <div class='interactivesetup-do'>
+          <input type='email' id='interative-email' placeholder='Email Address'>
+          <p id='emailtip'></p>
+          <button id='interactiveemail-submit'>Submit!</button>
+          <img src='https://int-getbrandkit.getbrandkit.com/emailicon-blue.png' class='interactive-icon'>
+        </div>
+      </div>
+      <div id='interactive-2' class='interactive-steps'>
+        <div class='interactivesetup-text'>
+          <h1>Check your email!</h1>
+          <p>We just sent you a verification code.</p>
+        </div>
+        <div class='interactivesetup-do'>
+          <input type='text' id='interative-otc' placeholder='Verification Code'>
+          <p id='verificationcodetip'></p>
+          <button id='interactiveemail-submit'>Submit!</button>
+          <img src='https://int-getbrandkit.getbrandkit.com/emailicon-blue.png' class='interactive-icon'>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js'></script>
   <script src='https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js'></script>

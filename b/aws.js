@@ -15,8 +15,10 @@ let s3 = new AWS.S3({
 })
 function addPhoto() {
   let files = document.getElementById('pfpup').files
+  let fileExtension 
   if (!files.length) {
     return alert('Please choose a file to upload first.')
+    
   }
   let file = files[0]
   let id = self.crypto.randomUUID()
@@ -47,6 +49,6 @@ function addPhoto() {
   )
 }
 
-document.querySelector('#').addEventListener('change', () => {
+document.querySelector('#pfpup').addEventListener('change', () => {
   addPhoto()
 })

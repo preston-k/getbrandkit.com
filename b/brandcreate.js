@@ -8,3 +8,27 @@ const firebaseConfig = {
 }
 firebase.initializeApp(firebaseConfig)
 const database = firebase.database()
+let emailValid = false
+let interactiveemail = document.querySelector('#interative-email')
+interactiveemail.addEventListener('change', () => {
+  console.log(interactiveemail.value)
+  if (interactiveemail.value.includes('@gmail.com') || interactiveemail.value.includes('@yahoo.com') || interactiveemail.value.includes('@aol.com') || interactiveemail.value.includes('@outlook.com') || interactiveemail.value.includes('@icloud.com') || interactiveemail.value.includes('@me.com')) {
+    console.log('personal email')
+    document.querySelector('#emailtip').innerHTML = 'Please enter a business email, not a personal one.'
+    emailValid = false
+  } else {
+    emailValid = true
+  }
+})
+document.querySelector('#interactiveemail-submit').addEventListener('click', async () => {
+  if (emailValid) {
+    let id = self.crypto.randomUUID()
+    await database.ref(`users/${id}/`).update({
+      email: interactiveemail.value,
+      verified: false,
+    })
+    // SEND VERIFICATION CODE EMAIL HERE
+    document.querySelector('#interactive-1').style.display = 'none'
+    document.querySelector('#interactive-2').style.display = 'block'
+  }
+})

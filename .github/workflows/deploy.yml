@@ -28,8 +28,7 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git checkout -b obfuscated-code
           git add .
-          git commit -m 'Obfuscate code before deploy'
-          git push origin main
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git commit -m 'Obfuscate code for deployment'
+          git push origin obfuscated-code --force

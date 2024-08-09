@@ -157,12 +157,12 @@ fieldset {
 .noMargin {
   margin: 0;
 }
-
 #assetview-publicDesc {
   width: 90%;
   border: 2px solid black;
   border-radius: 15px;
   height: 30px;
+  font-family: 'Open Sans', sans-serif;
 }
 #downloadbutton-icon {
   height: 40px;
@@ -249,4 +249,35 @@ fieldset {
 }
 #interactive-2 {
   display: none;
+}
+#addnew-img {
+  width: 60% !important;
+}
+#brandviewer {
+  overflow-x: scroll;
+  /* position: fixed; */
+  /* left: 0; */
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.brandview-tile {
+  width: 250px;
+  height: 100px;
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.brandview-tile:hover {
+  background-color: #d3d3d3;
+}
+.brandview-logo {
+  max-width: 90%;
+}
+button {
+  cursor: pointer;
 }

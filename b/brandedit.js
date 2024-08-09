@@ -22,6 +22,12 @@ document.querySelector('#close-detailed').addEventListener('click', () => {
   document.querySelector('#asset-detailed-wrapper').style.display = 'none'
   opened = ''
 })
+const urlParams = new URLSearchParams(window.location.search)
+const b = urlParams.get('b')
+
+if (b) {
+  console.log(b)
+}
 let url = new URLSearchParams(window.location.search)
 if (url.get('b') == '' || url.get('b') == null) {
   // window.location.replace('../brands.html')

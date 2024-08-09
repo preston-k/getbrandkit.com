@@ -24,7 +24,7 @@ document.querySelector('#close-detailed').addEventListener('click', () => {
 })
 let url = new URLSearchParams(window.location.search)
 if (url.get('b') == '' || url.get('b') == null) {
-  window.location.replace('../brands.html')
+  // window.location.replace('../brands.html')
 }
 let brand = url.get('b')
 let addLogos = ''

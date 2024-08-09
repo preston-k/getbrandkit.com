@@ -48,7 +48,6 @@ fieldset {
 }
 .asset-preview-color {
   border-top: 2px solid black;
-  background-color: #04A5A6;
   width: 100%;
   height: 75%;
   border-radius: 0 0 13px 13px;
@@ -280,4 +279,14 @@ fieldset {
 }
 button {
   cursor: pointer;
+}
+#pricingtable {
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Josefin Sans', sans-serif !important;
+}
+.bi {
+  fill: black !important;
 }

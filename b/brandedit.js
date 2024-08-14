@@ -33,6 +33,7 @@ if (b) {
 }
 let url = new URLSearchParams(window.location.search)
 if (url.get('b') == '' || url.get('b') == null) {
+  console.log(url)
   // window.location.replace('../brands.html')
 }
 let brand = url.get('b')

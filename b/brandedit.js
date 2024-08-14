@@ -31,12 +31,12 @@ if (b == null || b == '') {
 if (b) {
   console.log(b)
 }
+
 let url = new URLSearchParams(window.location.search)
-if (url.get('b') == '' || url.get('b') == null) {
-  console.log(url)
+if (location.pathname.slice(3) == null) {
   // window.location.replace('../brands.html')
 }
-let brand = url.get('b')
+let brand = location.pathname.slice(3)
 let addLogos = ''
 console.log(brand)
 

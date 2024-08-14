@@ -23,15 +23,10 @@ document.querySelector('#close-detailed').addEventListener('click', () => {
   opened = ''
 })
 const urlParams = new URLSearchParams(window.location.search)
-const b = urlParams.get('b')
+const b = location.pathname.slice(3)
 if (b == null || b == '') {
   document.querySelector('#non-existb').style.display = 'block'
 }
-
-if (b) {
-  console.log(b)
-}
-
 let url = new URLSearchParams(window.location.search)
 if (location.pathname.slice(3) == null) {
   // window.location.replace('../brands.html')

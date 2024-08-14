@@ -24,6 +24,9 @@ document.querySelector('#close-detailed').addEventListener('click', () => {
 })
 const urlParams = new URLSearchParams(window.location.search)
 const b = urlParams.get('b')
+if (b == null || b == '') {
+  document.querySelector('#non-existb').style.display = 'block'
+}
 
 if (b) {
   console.log(b)

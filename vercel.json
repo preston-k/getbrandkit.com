@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/b/:b",
-      "destination": "/b/main.html?b=:b"
+      "destination": "/bmain"
     }
   ]
 }

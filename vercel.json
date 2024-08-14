@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/b/:b",
-      "destination": "/b/main.html?b=:b"
+      "source": "/b/:b*",
+      "destination": "/b/main.html"
     }
   ]
 }

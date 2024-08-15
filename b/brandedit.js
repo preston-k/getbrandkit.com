@@ -34,7 +34,10 @@ if (location.pathname.slice(3) == null) {
 let brand = location.pathname.slice(3)
 let addLogos = ''
 console.log(brand)
-
+database.ref(`brands/${brand}/`).once('value').then(snapshot => {
+  console.log(snapshot.val())
+  
+})
 function updateDetails(assetType) {
 
 }

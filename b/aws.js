@@ -49,6 +49,6 @@ function addPhoto() {
   )
 }
 
-document.querySelector('#pfpup').addEventListener('change', () => {
+document.querySelector('#file-input').addEventListener('change', () => {
   addPhoto()
 })

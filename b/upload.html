@@ -4,14 +4,89 @@
   <meta charset='UTF-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <title></title>
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins'/>
-  <link rel='icon' href='https://cdn.prestonkwei.com/personalwebsitefavicon.png'>
-  <link href='style.css' rel='stylesheet' type='text/css' />
-  <link rel='stylesheet' href='https://cdn.prestonkwei.com/basecode/basecss.css'>
+  <title>Upload Assets || getbrandkit.com</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Moderustic'/>
+  <link href='../style.css' rel='stylesheet' type='text/css' />
 </head>
 <body>
-  <input type='file' id='pfpup'>
+  <div id='uploadpage-main'>
+    <h1>Upload Your Brand's Assets</h1>
+    <div id='uploadbox' class='css-d1aa3'>
+      <img src='https://int-getbrandkit.getbrandkit.com/upload-cloud-black-out.png' alt='Upload Image' class='iconimage' draggable='false'>
+      <p>Click here to upload files.</p>
+      <input type='file' id='file-input'>
+    </div>
+    <button id='file-upload-first'>Upload!</button>
+  </div>
+  <div id='uploaded-details-wrap'>
+    <div id='uploaded-details'>
+      <div id='uploaded-left' class='bg-squares'></div>
+      <div id='uploaded-right'>
+        <p id='uploaded-close'>Close</p>
+        <h1>Asset Details!</h1>
+        <p>What is this file for?</p>
+        <select id='asset-type-select'>
+          <option value='Primary Logo'>Primary Logo</option>
+          <option value='Secondary Logo'>Secondary Logo</option>
+          <option value='Special Logo'>Special Logo</option>
+          <option value='Favicon'>Favicon</option>
+          <option value='Wordmark'>Wordmark</option>
+          <option value='Lettermark'>Lettermark</option>
+          <option value='Brand Mark'>Brand Mark</option>
+          <option value='Combination Mark'>Combination Mark</option>
+          <option value='Emblem'>Emblem</option>
+          <option value='Monogram'>Monogram</option>
+          <option value='Mascot Logo'>Mascot Logo</option>
+          <option value='Animated Logo'>Animated Logo</option>
+          <option value='Responsive Logo'>Responsive Logo</option>
+          <option value='Social Media Logo'>Social Media Logo</option>
+          <option value='Event Logo'>Event Logo</option>
+          <option value='Product Logo'>Product Logo</option>
+          <option value='Vintage Logo'>Vintage Logo</option>
+          <option value='Flat Logo'>Flat Logo</option>
+          <option value='3D Logo'>3D Logo</option>
+          <option value='Typography Logo'>Typography Logo</option>
+          <option value='Minimalist Logo'>Minimalist Logo</option>
+          <option value='Geometric Logo'>Geometric Logo</option>
+          <option value='Abstract Logo'>Abstract Logo</option>
+          <option value='Badge Logo'>Badge Logo</option>
+          <option value='Heritage Logo'>Heritage Logo</option>
+          <option value='Seasonal Logo'>Seasonal Logo</option>
+          <option value='Dynamic Logo'>Dynamic Logo</option>
+          <option value='Other Logo'>Other</option>
+        </select>
+        <p id='upload-assettype-info'>Primary logos are mainly used on testimonial pages and are the face of your brand.</p>
+        <p>Add a public description:</p>
+        <textarea class='uploaded-details-textarea' id='public-desc' placeholder='What is this asset? How should it be used? When should it be used? Who should use it?'></textarea>
+        <p>Add internal notes:</p>
+        <textarea class='uploaded-details-textarea' id='private-desc' placeholder='What should other team members know about this asset?'></textarea>
+        <input type='checkbox' id='screensizeonly'>
+        <label for='screensizeonly'>This asset should only be displayed on specific screen sizes.</label>
+        <div id='custom-size-selection'>
+          <p>Only display when:</p>
+          <p class='customsize-inline'>Width is:</p>
+          <input type='number' class='customsize-inline numberinput-customsize' id='width-number'>
+          <select class='customsize-inline unitselect-customsize' id='w-cs'>
+            <option value='px'>px</option>
+            <option value='em'>em</option>
+            <option value='cm'>cm</option>
+            <option value='mm'>mm</option>
+            <option value='in'>in</option>
+          </select>
+          <p class='customsize-inline'>Height:</p>
+          <input type='number' class='customsize-inline numberinput-customsize' id='height-number'>
+          <select class='customsize-inline unitselect-customsize' id='h-cs'>
+            <option value='px'>px</option>
+            <option value='em'>em</option>
+            <option value='cm'>cm</option>
+            <option value='mm'>mm</option>
+            <option value='in'>in</option>
+          </select>
+        </div>
+      </div>  
+    </div>
+  </div>
+  <!-- <input type='file' id='pfpup'> -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js'></script>
 <script src='https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js'></script>
@@ -19,6 +94,7 @@
 <script src='https://kit.fontawesome.com/c947e2382a.js' crossorigin='anonymous'></script>
 <script src='https://sdk.amazonaws.com/js/aws-sdk-2.1624.0.min.js'> </script>
   <script src='aws.js'></script>
+  <script src='brandupload.js'></script>
 </head>
 </body>
 </html>
